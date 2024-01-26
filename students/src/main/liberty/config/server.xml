@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server description="students">
+
+    <featureManager>
+        <feature>jakartaee-10.0</feature>
+        <feature>microProfile-6.0</feature>
+    </featureManager>
+
+    <variable name="http.port" defaultValue="9080" />
+    <variable name="https.port" defaultValue="9443" />
+    <variable name="context.root" defaultValue="/students" />
+    <variable name="postgres/hostname" defaultValue="localhost" />
+    <variable name="postgres/portnum" defaultValue="5434" />
+
+    <httpEndpoint id="defaultHttpEndpoint"
+                  httpPort="${http.port}"
+                  httpsPort="${https.port}" />
+
+    <!-- Automatically expand WAR files and EAR files -->
+    <applicationManager autoExpand="true"/>
+
+    <!-- Configures the application on a specified context root -->
+    <webApplication contextRoot="${context.root}"
+                    location="students.war" />
+
+    <!-- Default SSL configuration enables trust for default certificates from the Java runtime -->
+    <ssl id="defaultSSLConfig" trustDefaultCerts="true" />
+
+    <library id="postgresql-library">
+        <fileset dir="${shared.resource.dir}/" includes="*.jar" />
+    </library>
+
+    <!-- Datasource Configuration -->
+    <dataSource id="DefaultDataSource" jndiName="jdbc/postgresql">
+        <jdbcDriver libraryRef="postgresql-library" />
+        <properties.postgresql databaseName="students"
+                               serverName="localhost"
+                               portNumber="5434"
+                               user="postgres"
+                               password="daniela"/>
+    </dataSource>
+</server>

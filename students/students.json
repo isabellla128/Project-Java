@@ -1,0 +1,18 @@
+{
+  "students": [
+    {
+      "name": "Haiura Andreea-Isabela",
+      "email": "andreea_haiura@yahoo.com",
+      "grade": "9.5"
+    },
+    {
+      "name": "Petrea Daniela",
+      "email": "dana.petrea@gmail.com",
+      "grade": "10"
+    },
+    {
+      "name": "Muntean Iulian",
+      "email": "iuly.muntean@yahoo.com",
+      "grade": "9.9"
+    }]
+}
