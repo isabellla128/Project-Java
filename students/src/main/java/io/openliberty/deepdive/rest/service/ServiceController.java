@@ -2,25 +2,17 @@ package io.openliberty.deepdive.rest.service;
 
 import io.openliberty.deepdive.rest.model.Student;
 import io.openliberty.deepdive.rest.repository.StudentRepository;
-import jakarta.enterprise.context.ApplicationScoped;
-import jakarta.transaction.HeuristicMixedException;
-import jakarta.transaction.HeuristicRollbackException;
-import jakarta.transaction.RollbackException;
-import jakarta.transaction.SystemException;
-import jakarta.enterprise.context.ApplicationScoped;
-import jakarta.inject.Inject;
-import jakarta.transaction.Transactional;
-import jakarta.ws.rs.Consumes;
-import jakarta.ws.rs.DELETE;
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.POST;
-import jakarta.ws.rs.PUT;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.PathParam;
-import jakarta.ws.rs.Produces;
-import jakarta.ws.rs.QueryParam;
-import jakarta.ws.rs.core.MediaType;
-import jakarta.ws.rs.core.Response;
+import javax.enterprise.context.ApplicationScoped;
+import javax.transaction.*;
+import javax.inject.Inject;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.enums.ParameterIn;
 import org.eclipse.microprofile.openapi.annotations.enums.SchemaType;
@@ -31,9 +23,9 @@ import org.eclipse.microprofile.openapi.annotations.responses.APIResponseSchema;
 import org.eclipse.microprofile.openapi.annotations.responses.APIResponses;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 @ApplicationScoped
@@ -114,6 +106,7 @@ public class ServiceController {
 
 
     @POST
+    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @APIResponses(value = {
             @APIResponse(responseCode = "200",
@@ -126,17 +119,18 @@ public class ServiceController {
             description = "Add students in database",
             operationId = "addStudents"
     )
-    public Response addStudents() throws HeuristicRollbackException, SystemException, HeuristicMixedException, RollbackException {
+    public Response addStudents(InputStream jsonPayload) throws HeuristicRollbackException, SystemException, HeuristicMixedException, RollbackException {
         try {
-            String currentDirectory = System.getProperty("user.dir");
-            String filePath = currentDirectory.split("students")[0] + "/students/students.json";
-            BufferedReader reader = new BufferedReader(new FileReader(filePath));
             StringBuilder jsonContent = new StringBuilder();
-            String line;
-            while ((line = reader.readLine()) != null) {
-                jsonContent.append(line);
+            try (Reader reader = new BufferedReader(new InputStreamReader
+                    (jsonPayload, StandardCharsets.UTF_8))) {
+                int c = 0;
+                while ((c = reader.read()) != -1) {
+                    jsonContent.append((char) c);
+                }
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
-            reader.close();
             JSONObject jsonObject = new JSONObject(jsonContent.toString());
             JSONArray studentsArray = jsonObject.getJSONArray("students");
             for (int i = 0; i < studentsArray.length(); i++) {
@@ -151,12 +145,11 @@ public class ServiceController {
                 }
                 studentRepository.add(name, email, grade);
             }
-        } catch (IOException | jakarta.transaction.NotSupportedException e) {
+        } catch (NotSupportedException e) {
             e.printStackTrace();
         }
         return success("Students were added in database.");
     }
-
 
     private Response success(String message) {
         return Response.ok("{ \"ok\" : \"" + message + "\" }").build();

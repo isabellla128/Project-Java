@@ -2,8 +2,8 @@
 <server description="students">
 
     <featureManager>
-        <feature>jakartaee-10.0</feature>
-        <feature>microProfile-6.0</feature>
+        <feature>javaee-8.0</feature>
+        <feature>microProfile-4.1</feature>
     </featureManager>
 
     <variable name="http.port" defaultValue="9080" />

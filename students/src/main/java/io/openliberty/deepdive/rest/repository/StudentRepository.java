@@ -4,11 +4,11 @@ import java.io.Serializable;
 import java.util.List;
 
 import io.openliberty.deepdive.rest.model.Student;
-import jakarta.annotation.Resource;
-import jakarta.enterprise.context.ApplicationScoped;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
-import jakarta.transaction.*;
+import javax.annotation.Resource;
+import javax.enterprise.context.ApplicationScoped;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.transaction.*;
 
 @ApplicationScoped
 public class StudentRepository {

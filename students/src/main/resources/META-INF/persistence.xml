@@ -8,11 +8,11 @@
         <jta-data-source>jdbc/postgresql</jta-data-source>
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
-            <property name="jakarta.persistence.schema-generation.database.action"
+            <property name="javax.persistence.schema-generation.database.action"
                       value="create"/>
-            <property name="jakarta.persistence.schema-generation.scripts.action"
+            <property name="javax.persistence.schema-generation.scripts.action"
                       value="create"/>
-            <property name="jakarta.persistence.schema-generation.scripts.create-target"
+            <property name="javax.persistence.schema-generation.scripts.create-target"
                       value="createDDL.ddl"/>
         </properties>
     </persistence-unit>
