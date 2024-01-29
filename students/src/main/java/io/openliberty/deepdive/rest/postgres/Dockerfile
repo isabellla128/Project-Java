@@ -1,7 +1,7 @@
 FROM postgres:16.1
 
 # set env variable for password to docker
-ENV POSTGRES_PASSWORD daniela
+ENV POSTGRES_PASSWORD 1234
 # create database called database
 ENV POSTGRES_USER postgres
 

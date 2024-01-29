@@ -1,17 +1,13 @@
-package io.openliberty.deepdive.rest.model;
+package io.openliberty.deepdive.rest.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.NamedQuery;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Schema(name = "Student",
         description = "POJO that represents a single inventory entry.")
@@ -50,6 +46,9 @@ public class Student implements Serializable {
     @Column(name = "room")
     private String room;
 
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "student")
+    private List<Preference> preferences = new ArrayList<>();
+
     public Student() {
     }
 
@@ -79,34 +78,6 @@ public class Student implements Serializable {
 
     public String getEmail() {
         return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getGrade() {
-        return grade;
-    }
-
-    public void setGrade(String grade) {
-        this.grade = grade;
-    }
-
-    public String getDormitory() {
-        return dormitory;
-    }
-
-    public void setDormitory(String dormitory) {
-        this.dormitory = dormitory;
-    }
-
-    public String getRoom() {
-        return room;
-    }
-
-    public void setRoom(String room) {
-        this.room = room;
     }
 
     @Override

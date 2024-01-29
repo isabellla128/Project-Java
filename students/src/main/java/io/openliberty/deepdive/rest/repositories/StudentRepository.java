@@ -1,9 +1,8 @@
-package io.openliberty.deepdive.rest.repository;
+package io.openliberty.deepdive.rest.repositories;
 
-import java.io.Serializable;
 import java.util.List;
 
-import io.openliberty.deepdive.rest.model.Student;
+import io.openliberty.deepdive.rest.entities.Student;
 import javax.annotation.Resource;
 import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.EntityManager;
@@ -45,5 +44,4 @@ public class StudentRepository {
         em.persist(new Student(name, email, grade));
         utx.commit();
     }
-
 }

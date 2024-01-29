@@ -1,7 +1,7 @@
-package io.openliberty.deepdive.rest.service;
+package io.openliberty.deepdive.rest.controllers;
 
-import io.openliberty.deepdive.rest.model.Student;
-import io.openliberty.deepdive.rest.repository.StudentRepository;
+import io.openliberty.deepdive.rest.entities.Student;
+import io.openliberty.deepdive.rest.repositories.StudentRepository;
 import javax.enterprise.context.ApplicationScoped;
 import javax.transaction.*;
 import javax.inject.Inject;
@@ -30,7 +30,7 @@ import java.util.List;
 
 @ApplicationScoped
 @Path("/students/")
-public class ServiceController {
+public class StudentController {
     @Inject
     StudentRepository studentRepository;
 
