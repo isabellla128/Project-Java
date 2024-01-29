@@ -44,11 +44,11 @@ public class Student implements Serializable {
     @Column(name = "grade")
     private String grade;
 
-    @Column(name = "role")
-    private String role;
+    @Column(name = "dormitory")
+    private String dormitory;
 
-    @Column(name = "password")
-    private String password;
+    @Column(name = "room")
+    private String room;
 
     public Student() {
     }
@@ -57,8 +57,8 @@ public class Student implements Serializable {
         this.name = name;
         this.email = email;
         this.grade = grade;
-        this.role = "student";
-        this.password = "1234";
+        this.dormitory=null;
+        this.room=null;
     }
 
     public int getId() {
@@ -93,20 +93,20 @@ public class Student implements Serializable {
         this.grade = grade;
     }
 
-    public String getRole() {
-        return role;
+    public String getDormitory() {
+        return dormitory;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setDormitory(String dormitory) {
+        this.dormitory = dormitory;
     }
 
-    public String getPassword() {
-        return password;
+    public String getRoom() {
+        return room;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setRoom(String room) {
+        this.room = room;
     }
 
     @Override
