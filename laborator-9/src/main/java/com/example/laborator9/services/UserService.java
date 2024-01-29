@@ -1,8 +1,6 @@
 package com.example.laborator9.services;
 
-import com.example.laborator9.entities.User;
 import com.example.laborator9.models.UserDTO;
-import com.example.laborator9.models.UserRole;
 import com.example.laborator9.repositories.UserRepository;
 
 import javax.enterprise.context.SessionScoped;

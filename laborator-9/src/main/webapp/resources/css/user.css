@@ -1,0 +1,48 @@
+/* ------ user.xhtml ------ */
+
+#ui-button-add {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#ui-button-add:hover {
+    background-color: #1f0d3a;
+}
+
+.ui-dialog-add-preference {
+    margin-top: 250px;
+    position: absolute;
+}
+
+.ui-dialog-add-preference .ui-dialog-titlebar {
+    background-color: #333;
+    color: white;
+    border: none;
+}
+
+.ui-dialog-add-preference .ui-dialog-content {
+    padding: 20px;
+}
+
+.ui-dialog-add-preference .ui-dialog-footer {
+    text-align: right;
+}
+
+.ui-dialog-add-preference .ui-button-save {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    width: 5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ui-dialog-add-preference .ui-button-save:hover {
+    background-color: #1f0d3a;
+}

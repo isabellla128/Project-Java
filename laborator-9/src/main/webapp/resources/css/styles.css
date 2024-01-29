@@ -1,0 +1,52 @@
+/* ------ page.xhtml ------ */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+#header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+#content {
+    padding: 20px;
+}
+
+#footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+#menubarForm {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+
+#menubar {
+    background-color: #333;
+    color: white;
+}
+
+#menubar .ui-menuitem {
+    width: 120px;
+    background-color: #333;
+    color: white;
+    border: 1px solid #333;
+}
+
+#menubar .ui-menuitem:hover {
+    background-color: #1f0d3a;
+}

@@ -1,16 +1,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.org/ui"
-      xmlns:c="http://java.sun.com/jstl/core"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <h:outputStylesheet library = "css" name = "styles.css"  />
+</h:head>
 <f:view>
     <h1 style="display: flex; align-items:center; justify-content: center;">Choose Dormitory and Room</h1>
 </f:view>
 <h:form id="menubarForm">
     <p:menubar id="menubar">
-        <p:menuitem value="Logout" icon="fa fa-fw fa-plus" rendered="#{AuthorizationService.currentUser != null}" action="#{AuthorizationService.logout()}"/>
-        <p:menuitem value="User" outcome="user" icon="fa fa-fw fa-plus" rendered="#{AuthorizationService.currentUser != null}"/>
-        <p:menuitem value="Admin Page" outcome="admin" icon="fa fa-fw fa-plus" rendered="#{AuthorizationService.currentUser != null and AuthorizationService.currentUser.role.toString().equals('admin')}"/>
+        <p:menuitem value="Logout" icon="fa fa-fw fa-plus" action="#{AuthorizationService.logout()}"/>
+        <p:menuitem value="User" outcome="user" icon="fa fa-fw fa-plus"/>
+        <p:menuitem value="Admin Page" outcome="admin" icon="fa fa-fw fa-plus" rendered="#{AuthorizationService.currentUser.role.toString().equals('admin')}"/>
     </p:menubar>
 </h:form>
 </html>
