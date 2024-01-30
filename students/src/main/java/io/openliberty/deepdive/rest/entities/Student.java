@@ -1,9 +1,6 @@
 package io.openliberty.deepdive.rest.entities;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
 
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
 
@@ -46,8 +43,8 @@ public class Student implements Serializable {
     @Column(name = "room")
     private String room;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "student")
-    private List<Preference> preferences = new ArrayList<>();
+//    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "student")
+//    private List<Preference> preferences = new ArrayList<>();
 
     public Student() {
     }

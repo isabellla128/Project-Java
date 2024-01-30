@@ -1,20 +1,19 @@
 package io.openliberty.deepdive.rest.controllers;
 
 import io.openliberty.deepdive.rest.entities.Preference;
-import io.openliberty.deepdive.rest.entities.Student;
 import io.openliberty.deepdive.rest.models.PreferenceDTO;
 import io.openliberty.deepdive.rest.repositories.PreferenceRepository;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import org.eclipse.microprofile.openapi.annotations.Operation;
+import org.eclipse.microprofile.openapi.annotations.enums.ParameterIn;
+import org.eclipse.microprofile.openapi.annotations.enums.SchemaType;
+import org.eclipse.microprofile.openapi.annotations.media.Schema;
+import org.eclipse.microprofile.openapi.annotations.parameters.Parameter;
 import org.eclipse.microprofile.openapi.annotations.responses.APIResponse;
 import org.eclipse.microprofile.openapi.annotations.responses.APIResponseSchema;
 import org.eclipse.microprofile.openapi.annotations.responses.APIResponses;
@@ -28,6 +27,7 @@ public class PreferenceController {
     PreferenceRepository preferenceRepository;
 
     @GET
+    @Path("/")
     @Produces(MediaType.APPLICATION_JSON)
     @APIResponseSchema(value = Preference.class,
             responseDescription = "A list of preferences stored within the inventory.",
@@ -35,12 +35,34 @@ public class PreferenceController {
     @Operation(
             summary = "List contents.",
             description = "Returns the currently stored preference in the inventory.",
-            operationId = "listContents")
-    public List<Preference> listContents() {
+            operationId = "getAllPreferences")
+    public List<PreferenceDTO> getAllPreferences() {
         return preferenceRepository.getPreferences();
     }
 
+    @GET
+    @Path("/{username}")
+    @Produces(MediaType.APPLICATION_JSON)
+    @APIResponseSchema(value = Preference.class,
+            responseDescription = "A list of preferences stored within the inventory.",
+            responseCode = "200")
+    @Operation(
+            summary = "List contents.",
+            description = "Returns the currently stored preference in the inventory.",
+            operationId = "getAllPreferences")
+
+    public List<PreferenceDTO> getAllPreferences(
+        @Parameter(
+            name = "username", in = ParameterIn.PATH,
+            description = "The username of the student",
+            required = true, example = "dana.petrea@gmail.com",
+            schema = @Schema(type = SchemaType.STRING))
+        @PathParam("username") String username) {
+        return preferenceRepository.getPreferencesByUsername(username);
+    }
+
     @POST
+    @Path("/")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @APIResponses(value = {
