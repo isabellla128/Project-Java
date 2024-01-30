@@ -26,6 +26,7 @@ import org.json.JSONObject;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.List;
 
 @ApplicationScoped
@@ -34,17 +35,6 @@ public class StudentController {
     @Inject
     StudentRepository studentRepository;
 
-    @GET
-    @Path("/{parameter}")
-    public String doSomething(@PathParam("parameter") String parameter) {
-        return String.format("Processed parameter value '%s'", parameter);
-    }
-
-    @GET
-    @Path("/hello")
-    public String doSomething2() {
-        return "Hello";
-    }
 
     @GET
     @Path("/")
@@ -57,7 +47,24 @@ public class StudentController {
             description = "Returns the currently stored student in the inventory.",
             operationId = "listContents")
     public List<Student> listContents() {
-        return studentRepository.getStudents();
+        List<Student>students=new ArrayList<>();
+        for(StudentDTO studentDTO:studentRepository.getStudents())
+            students.add(studentDTO.toEntity());
+        return students;
+    }
+
+    @GET
+    @Path("/usernames")
+    @Produces(MediaType.APPLICATION_JSON)
+    @APIResponseSchema(value = Student.class,
+            responseDescription = "A list of students usernames stored within the inventory.",
+            responseCode = "200")
+    @Operation(
+            summary = "List of usernames.",
+            description = "Returns the currently stored username student in the inventory.",
+            operationId = "listContentsUsernames")
+    public List<String> listUsernames() {
+        return studentRepository.getStudentsNames();
     }
 
     @GET
@@ -83,25 +90,25 @@ public class StudentController {
     }
 
     @GET
-    @Path("/email/{email}")
+    @Path("/username/{username}")
     @Produces(MediaType.APPLICATION_JSON)
     @APIResponseSchema(value = Student.class,
-            responseDescription = "Student with a particular email.",
+            responseDescription = "Student with a particular username.",
             responseCode = "200")
     @Operation(
-            summary = "Get Student",
-            description = "Retrieves and returns the student with a particular email from the database ",
-            operationId = "getStudentByEmail"
+            summary = "Get Student By Username",
+            description = "Retrieves and returns the student with a particular username from the database ",
+            operationId = "getStudentByUsername"
     )
-    public Student getStudentByEmail(
+    public Student getStudentByUsername(
             @Parameter(
-                    name = "email", in = ParameterIn.PATH,
-                    description = "The email of the student",
+                    name = "username", in = ParameterIn.PATH,
+                    description = "The email used as username of the student",
                     required = true, example = "dana.petrea@gmail.com",
                     schema = @Schema(type = SchemaType.STRING)
             )
-            @PathParam("email") String email) {
-        return studentRepository.getStudentByEmail(email);
+            @PathParam("username") String username) {
+        return studentRepository.getStudentByUsername(username);
     }
 
 
@@ -136,14 +143,14 @@ public class StudentController {
             for (int i = 0; i < studentsArray.length(); i++) {
                 JSONObject studentObject = studentsArray.getJSONObject(i);
                 String name = studentObject.getString("name");
-                String email = studentObject.getString("email");
+                String username = studentObject.getString("username");
                 String grade = studentObject.getString("grade");
                 System.out.println(name);
-                Student s = studentRepository.getStudentByEmail(email);
+                Student s = studentRepository.getStudentByUsername(username);
                 if (s != null) {
-                    return fail(email + " already exists.");
+                    return fail(username + " already exists.");
                 }
-                studentRepository.add(name, email, grade);
+                studentRepository.add(name, username, grade);
             }
         } catch (NotSupportedException e) {
             e.printStackTrace();

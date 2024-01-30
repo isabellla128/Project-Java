@@ -10,88 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52f0c367-656f-4e52-a537-f8441372379f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T205223.200.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T205229.200.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T210312.404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T210551.404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T210556.404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T210641.500.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T210857.404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T210929.200.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T212302.200.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T212323.200.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T213415.404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T213421.404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T213425.404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T213434.200.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T213503.200.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T213634.200.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T213647.200.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T213705.200.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T213821.200.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T213834.200.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T214012.200.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T214158.404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T214210.404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T215409.500.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T215417.500.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T215634.200.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T222742.500.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T222902.500.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T223154.200.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/microprofile-config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/dependency-maven-plugin-markers/fish.payara.extras-payara-micro-jar-5.2022.5.marker" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/extracted-payaramicro/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/extracted-payaramicro/META-INF/maven/fish.payara.micro/payara-micro-boot/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/extracted-payaramicro/META-INF/maven/fish.payara.server.internal.extras/payara-micro-boot/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/extracted-payaramicro/META-INF/maven/fish.payara.server.internal.extras/payara-micro-boot/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/extracted-payaramicro/MICRO-INF/domain/boot.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/extracted-payaramicro/MICRO-INF/domain/branding/glassfish-version.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/extracted-payaramicro/MICRO-INF/domain/cacerts.jks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/extracted-payaramicro/MICRO-INF/domain/default-web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/extracted-payaramicro/MICRO-INF/domain/domain.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/extracted-payaramicro/MICRO-INF/domain/keyfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/extracted-payaramicro/MICRO-INF/domain/keystore.jks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/extracted-payaramicro/MICRO-INF/domain/logging.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/extracted-payaramicro/MICRO-INF/domain/login.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/extracted-payaramicro/MICRO-INF/domain/server.policy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/extracted-payaramicro/MICRO-INF/payara-boot.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/extracted-payaramicro/MICRO-INF/post-boot-commands.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/extracted-payaramicro/MICRO-INF/post-deploy-commands.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/extracted-payaramicro/MICRO-INF/pre-boot-commands.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/laborator-9-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/laborator-9-1.0-SNAPSHOT/WEB-INF/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/laborator-9-1.0-SNAPSHOT/WEB-INF/classes/META-INF/microprofile-config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/laborator-9-1.0-SNAPSHOT/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/laborator-9-1.0-SNAPSHOT/WEB-INF/faces-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/laborator-9-1.0-SNAPSHOT/WEB-INF/glassfish-web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/laborator-9-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/laborator-9-1.0-SNAPSHOT/admin.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/laborator-9-1.0-SNAPSHOT/decorators/footer.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/laborator-9-1.0-SNAPSHOT/decorators/header.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/laborator-9-1.0-SNAPSHOT/errorForm.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/laborator-9-1.0-SNAPSHOT/forbidden.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/laborator-9-1.0-SNAPSHOT/login.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/laborator-9-1.0-SNAPSHOT/page.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/laborator-9-1.0-SNAPSHOT/user.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/laborator9/beans/FileUploadBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/laborator9/beans/FileUploadBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/laborator9/controllers/CommunicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/laborator9/controllers/CommunicationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/laborator9/retriever/StudentsRetriever.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/laborator9/retriever/StudentsRetriever.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/page.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/user.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,7 +192,7 @@
       <workItem from="1706566286476" duration="2345000" />
       <workItem from="1706613816573" duration="8794000" />
       <workItem from="1706624431204" duration="1167000" />
-      <workItem from="1706625862874" duration="3325000" />
+      <workItem from="1706625862874" duration="3567000" />
     </task>
     <servers />
   </component>
@@ -283,28 +204,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/laborator9/beans/FileUploadBean.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/laborator9/beans/FileUploadBean.java</url>
-          <line>50</line>
+          <line>48</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/laborator9/beans/FileUploadBean.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/laborator9/beans/FileUploadBean.java</url>
           <line>46</line>
-          <option name="timeStamp" value="21" />
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/laborator9/beans/FileUploadBean.java</url>
           <line>47</line>
-          <option name="timeStamp" value="22" />
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

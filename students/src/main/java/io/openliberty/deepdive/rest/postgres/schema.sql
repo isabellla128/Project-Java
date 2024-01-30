@@ -5,7 +5,7 @@ CREATE DATABASE students;
 CREATE TABLE Student (
                          id SERIAL,
                          name varchar(50),
-                         email varchar(50),
+                         username varchar(50),
                          grade varchar(50),
                          dormitory varchar(50),
                          room varchar(50),
