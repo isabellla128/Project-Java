@@ -1,6 +1,7 @@
 package io.openliberty.deepdive.rest.controllers;
 
 import io.openliberty.deepdive.rest.entities.Student;
+import io.openliberty.deepdive.rest.models.StudentDTO;
 import io.openliberty.deepdive.rest.repositories.StudentRepository;
 import javax.enterprise.context.ApplicationScoped;
 import javax.transaction.*;
@@ -26,7 +27,6 @@ import org.json.JSONObject;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
 import java.util.List;
 
 @ApplicationScoped
@@ -45,12 +45,9 @@ public class StudentController {
     @Operation(
             summary = "List contents.",
             description = "Returns the currently stored student in the inventory.",
-            operationId = "listContents")
-    public List<Student> listContents() {
-        List<Student>students=new ArrayList<>();
-        for(StudentDTO studentDTO:studentRepository.getStudents())
-            students.add(studentDTO.toEntity());
-        return students;
+            operationId = "getAllStudents")
+    public List<StudentDTO> getAllStudents() {
+        return studentRepository.getStudents();
     }
 
     @GET
@@ -63,7 +60,7 @@ public class StudentController {
             summary = "List of usernames.",
             description = "Returns the currently stored username student in the inventory.",
             operationId = "listContentsUsernames")
-    public List<String> listUsernames() {
+    public List<String> listContentsUsernames() {
         return studentRepository.getStudentsNames();
     }
 

@@ -29,7 +29,7 @@ public class PreferenceRepository {
         List<PreferenceDTO> preferencesDTO = new ArrayList<>();
         List<Preference> preferences =  em.createNamedQuery("Preference.findAll", Preference.class).getResultList();
         for(Preference userPreference : preferences) {
-            String username = userPreference.getStudent().getName();
+            String username = userPreference.getStudentName();
             createPreferenceDTO(preferencesDTO, preferences, username);
         }
         return preferencesDTO;
@@ -65,7 +65,7 @@ public class PreferenceRepository {
         if(studentToAdd != null) {
             Preference newPreference = new Preference();
             newPreference.setDormitory(preferenceDTO.getDormitory());
-            newPreference.setStudent(studentToAdd);
+            newPreference.setStudentName(studentToAdd.getUsername());
             if(!preferenceDTO.getMyRooms().isEmpty()) {
                 utx.begin();
                 for (int i = 0; i < preferenceDTO.getMyRooms().size(); i++) {

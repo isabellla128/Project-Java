@@ -4,9 +4,7 @@ import io.openliberty.deepdive.rest.entities.Student;
 import lombok.Getter;
 
 import javax.enterprise.context.RequestScoped;
-import javax.inject.Named;
-import javax.persistence.criteria.CriteriaBuilder;
-import java.util.stream.Collectors;
+
 @Getter
 @RequestScoped
 public class StudentDTO {
@@ -14,20 +12,22 @@ public class StudentDTO {
     private String name;
     private String username;
     private String grade;
+
     public StudentDTO(){}
-    public StudentDTO(Integer id,String name, String username, String grade) {
+
+    public StudentDTO(Integer id, String name, String username, String grade) {
         this.id=id;
         this.name = name;
         this.username = username;
         this.grade = grade;
     }
+
     public StudentDTO(Student student) {
         this.id=student.getId();
         this.name=student.getName();
         this.username=student.getUsername();
         this.grade=student.getGrade();
     }
-
 
     public Student toEntity() {
         Student student = new Student();
@@ -37,5 +37,4 @@ public class StudentDTO {
         student.setGrade(this.grade);
         return student;
     }
-
 }

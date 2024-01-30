@@ -14,17 +14,17 @@ import javax.persistence.*;
 @Table(name = "Preference")
 @NamedQuery(name = "Preference.findAll", query = "SELECT e FROM Preference e")
 @NamedQuery(name = "Preference.findAllByUsername",
-        query = "SELECT e FROM Preference e WHERE e.student.name =: name")
+        query = "SELECT e FROM Preference e WHERE e.studentName =: name")
 @NamedQuery(name = "Preference.findAllRoomsByDormitoryAndUsername",
-        query = "SELECT e FROM Preference e WHERE e.student.name =: name AND e.dormitory =: dormitory")
+        query = "SELECT e FROM Preference e WHERE e.studentName =: name AND e.dormitory =: dormitory")
 //@NamedQuery(name = "Student.findStudentByEmail",
 //        query = "SELECT e FROM Student e WHERE e.email = :email")
 public class Preference {
     //id, camin, camera, username_student
-    @SequenceGenerator(name = "SEQ",
+    @SequenceGenerator(name = "SEQP",
             sequenceName = "preference_id_seq",
             allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "SEQ")
+    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "SEQP")
     @Id
     @Column(name = "id")
     private int id;
@@ -37,9 +37,7 @@ public class Preference {
     @Column(name = "room")
     private String room;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "student_name")
-    private Student student;
-
-
+    @Schema(required = true)
+    @Column(name = "student_name")
+    private String studentName;
 }
