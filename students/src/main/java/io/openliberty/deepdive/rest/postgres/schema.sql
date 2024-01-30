@@ -21,7 +21,7 @@ CREATE TABLE Preference (
     id preference_id,
     dormitory varchar(50) not null,
     room varchar(50) not null,
-    student_name varchar(50) not null references Student(name),
+    student_name varchar(50) not null,
     primary key(id)
 );
 

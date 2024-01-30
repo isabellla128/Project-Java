@@ -49,9 +49,9 @@ public class PreferenceController {
     @Operation(
             summary = "List contents.",
             description = "Returns the currently stored preference in the inventory.",
-            operationId = "getAllPreferences")
+            operationId = "getAllPreferencesByUsername")
 
-    public List<PreferenceDTO> getAllPreferences(
+    public List<PreferenceDTO> getAllPreferencesByUsername(
         @Parameter(
             name = "username", in = ParameterIn.PATH,
             description = "The username of the student",

@@ -1,6 +1,5 @@
 package io.openliberty.deepdive.rest.models;
 
-import io.openliberty.deepdive.rest.entities.Preference;
 import lombok.Getter;
 import lombok.Setter;
 
