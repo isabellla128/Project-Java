@@ -40,17 +40,16 @@ public class StudentsRetriever {
         }
         return message;
     }
-    public List<String> getStudentsUsernames() {
+    public String getStudentsUsernames() {
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target(LIBERTY_URL).path("usernames");
         Invocation.Builder builder = target.request();
         Response response = builder.get();
-        ArrayList<String>content=new ArrayList<>();
         if (response.getStatus() == 200) {
-            content = response.readEntity(ArrayList.class);
+            String content = response.readEntity(String.class);
             System.out.println("Response Content: " + content);
             return content;
         }
-        return content;
+        return "error";
     }
 }
