@@ -1,0 +1,406 @@
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/students
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-30T005248.200.txt
+
+###
+
+GET http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/students/name
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-30T005231.200.txt
+
+###
+
+GET http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/students/email
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-30T005224.200.txt
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-30T002005.200.txt
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-30T001832.200.txt
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-30T001456-1.404.html
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-30T001456.404.html
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T235719.200.txt
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T234754.200.txt
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T232656.400.json
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T231910.500.html
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T223154.200.txt
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T222902.500.html
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T222742.500.html
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T215634.200.txt
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T215417.500.html
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T215409.500.html
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T214210.404.html
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T214158.404.html
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T214012.200.txt
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T213834.200.txt
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T213821.200.txt
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T213705.200.txt
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T213647.200.txt
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T213634.200.txt
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T213503.200.txt
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T213434.200.txt
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T213425.404.html
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T213421.404.html
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T213415.404.html
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T212323.200.txt
+
+###
+
+POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T212302.200.txt
+
+###
+
+GET http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T210929.200.txt
+
+###
+
+GET http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T210857.404.html
+
+###
+
+GET http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T210641.500.html
+
+###
+
+GET http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T210556.404.html
+
+###
+
+GET http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T210551.404.html
+
+###
+
+GET http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T210312.404.html
+
+###
+
+GET http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T205229.200.txt
+
+###
+
+GET http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T205223.200.txt
+
+###
+
