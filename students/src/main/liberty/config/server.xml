@@ -37,6 +37,6 @@
                                serverName="localhost"
                                portNumber="5434"
                                user="postgres"
-                               password="1234"/>
+                               password="daniela"/>
     </dataSource>
 </server>

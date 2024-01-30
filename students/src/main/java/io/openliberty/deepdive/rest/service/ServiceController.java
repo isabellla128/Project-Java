@@ -1,8 +1,8 @@
-package io.openliberty.deepdive.rest.controllers;
+package io.openliberty.deepdive.rest.service;
 
 import io.openliberty.deepdive.rest.entities.Student;
 import io.openliberty.deepdive.rest.models.StudentDTO;
-import io.openliberty.deepdive.rest.repositories.StudentRepository;
+import io.openliberty.deepdive.rest.repository.StudentRepository;
 import javax.enterprise.context.ApplicationScoped;
 import javax.transaction.*;
 import javax.inject.Inject;
@@ -27,11 +27,12 @@ import org.json.JSONObject;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.List;
 
 @ApplicationScoped
 @Path("/students/")
-public class StudentController {
+public class ServiceController {
     @Inject
     StudentRepository studentRepository;
 
@@ -60,7 +61,7 @@ public class StudentController {
             summary = "List of usernames.",
             description = "Returns the currently stored username student in the inventory.",
             operationId = "listContentsUsernames")
-    public List<String> listContentsUsernames() {
+    public List<String> listUsernames() {
         return studentRepository.getStudentsNames();
     }
 

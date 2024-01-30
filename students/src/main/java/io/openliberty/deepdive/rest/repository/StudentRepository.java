@@ -1,4 +1,4 @@
-package io.openliberty.deepdive.rest.repositories;
+package io.openliberty.deepdive.rest.repository;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -22,6 +22,10 @@ public class StudentRepository {
     UserTransaction utx;
 
     public List<StudentDTO> getStudents() {
+        System.out.println(em.createNamedQuery("Student.findAll",Student.class).getResultList()
+                .stream()
+                .map(StudentDTO::new)
+                .collect(Collectors.toList()).get(0));
         return (em.createNamedQuery("Student.findAll",Student.class).getResultList())
                 .stream()
                 .map(StudentDTO::new)
@@ -30,7 +34,8 @@ public class StudentRepository {
     public List<String> getStudentsNames() {
         return (em.createNamedQuery("Student.findAll",Student.class).getResultList())
                 .stream()
-                .map(Student::getUsername)
+                .map(StudentDTO::new)
+                .map(StudentDTO::getUsername)
                 .collect(Collectors.toList());
     }
 
@@ -55,4 +60,5 @@ public class StudentRepository {
         em.persist(new Student(name, username, grade));
         utx.commit();
     }
+
 }

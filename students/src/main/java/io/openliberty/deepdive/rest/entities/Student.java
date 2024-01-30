@@ -2,14 +2,17 @@ package io.openliberty.deepdive.rest.entities;
 
 import java.io.Serializable;
 
-import lombok.Getter;
-import lombok.Setter;
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
-@Getter
-@Setter
 @Schema(name = "Student",
         description = "POJO that represents a single inventory entry.")
 @Entity
@@ -22,10 +25,10 @@ import javax.persistence.*;
 public class Student implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    @SequenceGenerator(name = "SEQS",
+    @SequenceGenerator(name = "SEQ",
             sequenceName = "student_id_seq",
             allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "SEQS")
+    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "SEQ")
     @Id
     @Column(name = "id")
     private int id;
@@ -56,6 +59,54 @@ public class Student implements Serializable {
         this.grade = grade;
         this.dormitory=null;
         this.room=null;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getGrade() {
+        return grade;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
+
+    public String getDormitory() {
+        return dormitory;
+    }
+
+    public void setDormitory(String dormitory) {
+        this.dormitory = dormitory;
+    }
+
+    public String getRoom() {
+        return room;
+    }
+
+    public void setRoom(String room) {
+        this.room = room;
     }
 
     @Override
