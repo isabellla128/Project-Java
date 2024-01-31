@@ -15,26 +15,18 @@ public class CampusRetriever {
         WebTarget target = client.target(LIBERTY_URL).path("dormitories/names");
         Invocation.Builder builder = target.request();
         Response response = builder.get();
-
-        if (response.getStatus() == 200) {
-            List<String> content = response.readEntity(new GenericType<List<String>>(){});
-            System.out.println("Response Content: " + content);
-            return content;
-        }
-        return null;
+        List<String> content = response.readEntity(new GenericType<List<String>>(){});
+        System.out.println("Response Content: " + content);
+        return content;
     }
 
-    public List<String> getStudent(String name) {
+    public List<String> getRooms(String name) {
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target(LIBERTY_URL).path("dormitory").path(name).path("rooms");
         Invocation.Builder builder = target.request();
         Response response = builder.get();
-
-        if (response.getStatus() == 200) {
-            List<String> content = response.readEntity(new GenericType<List<String>>(){});
-            System.out.println("Response Content: " + content);
-            return content;
-        }
-        return null;
+        List<String> content = response.readEntity(new GenericType<List<String>>(){});
+        System.out.println("Response Content: " + content);
+        return content;
     }
 }

@@ -1,6 +1,5 @@
 package com.example.laborator9.entities;
 
-import com.example.laborator9.models.UserRole;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

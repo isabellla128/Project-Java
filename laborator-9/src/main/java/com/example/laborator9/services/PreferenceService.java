@@ -24,7 +24,6 @@ public class PreferenceService {
         preference.setUsername(loggedInUser.getUsername());
         System.out.println(preference.getDormitory() + " " + preference.getMyRooms() + " " + preference.getUsername());
         //preferenceRepository.addPreference(preference);
-
     }
 
 

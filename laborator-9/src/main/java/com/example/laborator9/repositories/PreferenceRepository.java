@@ -5,7 +5,6 @@ import com.example.laborator9.models.PreferenceDTO;
 
 import javax.annotation.Resource;
 import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.UserTransaction;
@@ -20,7 +19,6 @@ public class PreferenceRepository {
 
     @Resource
     UserTransaction utx;
-
 
     public List<PreferenceDTO> getPreferences() {
         List<PreferenceDTO> preferencesDTO = new ArrayList<>();

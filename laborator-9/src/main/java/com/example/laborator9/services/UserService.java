@@ -1,6 +1,5 @@
 package com.example.laborator9.services;
 
-import com.example.laborator9.models.StudentDTO;
 import com.example.laborator9.models.UserDTO;
 import com.example.laborator9.repositories.UserRepository;
 import com.example.laborator9.utils.SendEmail;

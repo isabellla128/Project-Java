@@ -1,6 +1,5 @@
 package com.example.laborator9.retriever;
 
-import com.example.laborator9.models.StudentDTO;
 import com.example.laborator9.services.UserService;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -9,10 +8,7 @@ import javax.ws.rs.client.*;
 import javax.ws.rs.core.GenericType;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.List;
 
 @ApplicationScoped
@@ -21,19 +17,6 @@ public class StudentsRetriever {
     UserService userService;
 
     private final String LIBERTY_URL = "http://localhost:9080/students/api/students";
-
-    public List<StudentDTO> getStudents() {
-        Client client = ClientBuilder.newClient();
-        WebTarget target = client.target(LIBERTY_URL);
-        Invocation.Builder builder = target.request();
-        Response response = builder.get();
-        if (response.getStatus() == 200) {
-            List<StudentDTO> content = response.readEntity(new GenericType<List<StudentDTO>>(){});
-            System.out.println("Response Content: " + content);
-            return content;
-        }
-        return null;
-    }
 
     public String postStudents(InputStream jsonInputStream) {
         Client client = ClientBuilder.newClient();

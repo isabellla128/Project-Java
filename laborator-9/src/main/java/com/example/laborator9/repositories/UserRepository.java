@@ -3,7 +3,6 @@ package com.example.laborator9.repositories;
 import com.example.laborator9.entities.Group;
 import com.example.laborator9.entities.User;
 import com.example.laborator9.entities.UserGroup;
-import com.example.laborator9.models.StudentDTO;
 import com.example.laborator9.models.UserDTO;
 import com.example.laborator9.models.UserRole;
 import org.apache.commons.lang3.RandomStringUtils;
