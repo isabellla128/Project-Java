@@ -1,3 +1,39 @@
+GET http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/dormitories/names
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-31T165725.200.json
+
+###
+
+GET http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/preference/pref
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-31T165625.404.html
+
+###
+
+GET http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/dormitories/names
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-31T165343.200.json
+
+###
+
+GET http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/dormitories/names
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-31T165314.404.html
+
+###
+
 GET http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/dormitory/C1/rooms
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
@@ -423,46 +459,6 @@ User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 <> 2024-01-29T213503.200.txt
-
-###
-
-POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2024-01-29T213434.200.txt
-
-###
-
-POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2024-01-29T213425.404.html
-
-###
-
-POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2024-01-29T213421.404.html
-
-###
-
-POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/celsius
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2024-01-29T213415.404.html
 
 ###
 
