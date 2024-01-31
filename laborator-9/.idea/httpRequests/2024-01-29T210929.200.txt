@@ -1,1 +1,0 @@
-[{"email":"andreea_haiura@yahoo.com","grade":"9.5","id":2,"name":"Haiura Andreea-Isabela"},{"email":"dana.petrea@gmail.com","grade":"10","id":3,"name":"Petrea Daniela"},{"email":"iuly.muntean@yahoo.com","grade":"9.9","id":4,"name":"Muntean Iulian"}]
