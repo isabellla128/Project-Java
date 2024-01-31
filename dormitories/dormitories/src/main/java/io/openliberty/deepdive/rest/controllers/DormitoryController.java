@@ -37,7 +37,7 @@ public class DormitoryController {
     @GET
     @Path("/dormitories/names")
     @Produces({MediaType.APPLICATION_JSON})
-    public DormitoriesNamesResponse getDormitoriesNames() {
+    public List<String> getDormitoriesNames() {
         return dormitoryRepository.getDormitoriesNames();
     }
 

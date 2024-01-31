@@ -30,8 +30,8 @@ public class DormitoryRepository {
         }
         return dormitoriesDTO;
     }
-    public DormitoriesNamesResponse getDormitoriesNames() {
-        return new DormitoriesNamesResponse(em.createQuery("SELECT distinct e.name FROM Dormitory e").getResultList());
+    public List<String> getDormitoriesNames() {
+        return em.createQuery("SELECT distinct e.name FROM Dormitory e").getResultList();
     }
 
     public List<String> getDormitoryRooms(String dormitoryName) {
