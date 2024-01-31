@@ -1,8 +1,6 @@
 package io.openliberty.deepdive.rest.repositories;
 
 import io.openliberty.deepdive.rest.models.DormitoryDTO;
-import io.openliberty.deepdive.rest.response.DormitoriesNamesResponse;
-import io.openliberty.deepdive.rest.response.DormitoryRoomsResponse;
 
 import javax.annotation.Resource;
 import javax.enterprise.context.ApplicationScoped;

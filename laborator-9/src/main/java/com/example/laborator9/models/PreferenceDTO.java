@@ -1,13 +1,16 @@
 package com.example.laborator9.models;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 import java.util.List;
 
-@Setter
-@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Named(value = "PreferenceBean")
+@RequestScoped
 public class PreferenceDTO {
     private String dormitory;
     private List<String> myRooms;

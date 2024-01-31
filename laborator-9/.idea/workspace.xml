@@ -10,25 +10,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52f0c367-656f-4e52-a537-f8441372379f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laborator9/utils/SendEmail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laborator9/retriever/CampusRetriever.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laborator9/views/DormitoryView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dormitories/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dormitories/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dormitories/dormitories/src/main/java/io/openliberty/deepdive/rest/controllers/DormitoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dormitories/dormitories/src/main/java/io/openliberty/deepdive/rest/controllers/DormitoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dormitories/dormitories/src/main/java/io/openliberty/deepdive/rest/repositories/DormitoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dormitories/dormitories/src/main/java/io/openliberty/deepdive/rest/repositories/DormitoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dormitories/dormitories/src/main/java/io/openliberty/deepdive/rest/response/DormitoriesNamesResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dormitories/dormitories/src/main/java/io/openliberty/deepdive/rest/response/DormitoryRoomsResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dormitories/dormitories/src/main/liberty/config/server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dormitories/dormitories/src/main/liberty/config/server.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T213415.404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T213421.404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T213425.404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-01-29T213434.200.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/laborator9/beans/PreferenceBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/laborator9/beans/PreferenceBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/laborator9/controllers/CampusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/laborator9/controllers/CampusController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/laborator9/models/DormitoriesNamesResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/laborator9/models/DormitoryRoomsResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/laborator9/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/laborator9/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/laborator9/beans/PreferenceBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/laborator9/controllers/ApplicationConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/laborator9/controllers/CampusController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/laborator9/models/Dormitory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/laborator9/models/PreferenceDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/laborator9/models/PreferenceDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/user.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/laborator-9-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/laborator-9-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/laborator-9-1.0-SNAPSHOT/user.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/laborator-9-1.0-SNAPSHOT/user.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/.dockerignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/dormitories.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/src/main/java/com/example/demo/DemoRestApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/src/main/java/com/example/demo/controllers/DormitoryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/src/main/java/com/example/demo/entities/Dormitory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/src/main/java/com/example/demo/models/DormitoryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/src/main/java/com/example/demo/postgres/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/src/main/java/com/example/demo/postgres/postgres.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/src/main/java/com/example/demo/postgres/schema.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/src/main/java/com/example/demo/repositories/DormitoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/src/main/java/com/example/demo/response/DormitoriesNamesResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/src/main/java/com/example/demo/response/DormitoryRoomsResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/src/main/liberty/config/server.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/src/main/resources/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-b/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,6 +244,7 @@
       <workItem from="1706652780303" duration="1072000" />
       <workItem from="1706658011413" duration="1971000" />
       <workItem from="1706706535535" duration="4307000" />
+      <workItem from="1706742043046" duration="1343000" />
     </task>
     <servers />
   </component>
@@ -247,82 +271,82 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/laborator9/controllers/CampusController.java</url>
-          <line>58</line>
+          <line>55</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/laborator9/controllers/CampusController.java</url>
-          <line>59</line>
+          <line>56</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/laborator9/controllers/CampusController.java</url>
-          <line>53</line>
+          <line>50</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/laborator9/controllers/CampusController.java</url>
-          <line>54</line>
+          <line>51</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/laborator9/controllers/CampusController.java</url>
-          <line>55</line>
+          <line>52</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/laborator9/controllers/CampusController.java</url>
-          <line>42</line>
+          <line>39</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/laborator9/controllers/CampusController.java</url>
-          <line>43</line>
+          <line>40</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/laborator9/controllers/CampusController.java</url>
-          <line>37</line>
+          <line>34</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/laborator9/controllers/CampusController.java</url>
-          <line>38</line>
+          <line>35</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/laborator9/controllers/CampusController.java</url>
-          <line>39</line>
+          <line>36</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/laborator9/controllers/CampusController.java</url>
-          <line>20</line>
+          <line>17</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/laborator9/controllers/CampusController.java</url>
-          <line>21</line>
+          <line>18</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/laborator9/controllers/CampusController.java</url>
-          <line>22</line>
+          <line>19</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/laborator9/controllers/CampusController.java</url>
-          <line>25</line>
+          <line>22</line>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/laborator9/controllers/CampusController.java</url>
-          <line>26</line>
+          <line>23</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/laborator9/controllers/CampusController.java</url>
-          <line>62</line>
+          <line>59</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>

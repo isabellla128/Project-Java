@@ -1,10 +1,7 @@
 package io.openliberty.deepdive.rest.controllers;
 
-
 import io.openliberty.deepdive.rest.models.DormitoryDTO;
 import io.openliberty.deepdive.rest.repositories.DormitoryRepository;
-import io.openliberty.deepdive.rest.response.DormitoriesNamesResponse;
-import io.openliberty.deepdive.rest.response.DormitoryRoomsResponse;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;
