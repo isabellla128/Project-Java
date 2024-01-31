@@ -1,35 +1,32 @@
-package io.openliberty.deepdive.rest.repositories;
+package com.example.laborator9.repositories;
 
-import io.openliberty.deepdive.rest.entities.Preference;
-import io.openliberty.deepdive.rest.entities.Student;
-import io.openliberty.deepdive.rest.models.PreferenceDTO;
+import com.example.laborator9.entities.Preference;
+import com.example.laborator9.models.PreferenceDTO;
 
 import javax.annotation.Resource;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.transaction.*;
+import javax.transaction.UserTransaction;
 import java.util.ArrayList;
 import java.util.List;
 
 @ApplicationScoped
 public class PreferenceRepository {
 
-    @PersistenceContext(name = "jpa-unit")
+    @PersistenceContext(name = "Lab9PersistenceUnit")
     private EntityManager em;
 
     @Resource
     UserTransaction utx;
 
-    @Inject
-    private StudentRepository studentRepository;
 
     public List<PreferenceDTO> getPreferences() {
         List<PreferenceDTO> preferencesDTO = new ArrayList<>();
         List<Preference> preferences =  em.createNamedQuery("Preference.findAll", Preference.class).getResultList();
         for(Preference userPreference : preferences) {
-            String username = userPreference.getStudentName();
+            String username = userPreference.getUsername();
             createPreferenceDTO(preferencesDTO, preferences, username);
         }
         return preferencesDTO;
@@ -61,11 +58,10 @@ public class PreferenceRepository {
     }
 
     public void addPreference(PreferenceDTO preferenceDTO) throws Exception {
-        Student studentToAdd = studentRepository.getStudent(preferenceDTO.getUsername());
-        if(studentToAdd != null) {
+        if(preferenceDTO.getUsername() != null) {
             Preference newPreference = new Preference();
             newPreference.setDormitory(preferenceDTO.getDormitory());
-            newPreference.setStudentName(studentToAdd.getUsername());
+            newPreference.setUsername(preferenceDTO.getUsername());
             if(!preferenceDTO.getMyRooms().isEmpty()) {
                 utx.begin();
                 for (int i = 0; i < preferenceDTO.getMyRooms().size(); i++) {

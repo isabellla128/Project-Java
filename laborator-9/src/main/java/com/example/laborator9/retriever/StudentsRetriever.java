@@ -1,7 +1,12 @@
 package com.example.laborator9.retriever;
 
+import com.example.laborator9.models.StudentDTO;
+import com.example.laborator9.services.UserService;
+
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 import javax.ws.rs.client.*;
+import javax.ws.rs.core.GenericType;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.io.FileInputStream;
@@ -12,19 +17,24 @@ import java.util.List;
 
 @ApplicationScoped
 public class StudentsRetriever {
+    @Inject
+    UserService userService;
+
     private final String LIBERTY_URL = "http://localhost:9080/students/api/students";
-    public String getStudents() {
+
+    public List<StudentDTO> getStudents() {
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target(LIBERTY_URL);
         Invocation.Builder builder = target.request();
         Response response = builder.get();
         if (response.getStatus() == 200) {
-            String content = response.readEntity(String.class);
+            List<StudentDTO> content = response.readEntity(new GenericType<List<StudentDTO>>(){});
             System.out.println("Response Content: " + content);
             return content;
         }
-        return "error";
+        return null;
     }
+
     public String postStudents(InputStream jsonInputStream) {
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target(LIBERTY_URL);
@@ -38,18 +48,22 @@ public class StudentsRetriever {
         } else {
             message = "Unexpected response: " + response.getStatus();
         }
+        List<String> students = getStudentsUsernames();
+        for(String student: students) {
+            userService.addStudent(student);
+        }
         return message;
     }
-    public String getStudentsUsernames() {
+    public List<String> getStudentsUsernames() {
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target(LIBERTY_URL).path("usernames");
         Invocation.Builder builder = target.request();
         Response response = builder.get();
         if (response.getStatus() == 200) {
-            String content = response.readEntity(String.class);
+            List<String> content = response.readEntity(new GenericType<List<String>>(){});
             System.out.println("Response Content: " + content);
             return content;
         }
-        return "error";
+        return null;
     }
 }

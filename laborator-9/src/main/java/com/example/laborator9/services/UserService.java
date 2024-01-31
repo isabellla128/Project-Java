@@ -1,5 +1,6 @@
 package com.example.laborator9.services;
 
+import com.example.laborator9.models.StudentDTO;
 import com.example.laborator9.models.UserDTO;
 import com.example.laborator9.repositories.UserRepository;
 
@@ -16,5 +17,10 @@ public class UserService implements Serializable {
 
     public String getUserRole(UserDTO userDTO) {
         return userRepository.getUserRole(userDTO);
+    }
+    public void addStudent(String username) {
+        String password = userRepository.addStudent(username);
+        // we have username
+        // adauga logica de trimis mail
     }
 }

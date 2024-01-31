@@ -1,8 +1,9 @@
-package io.openliberty.deepdive.rest.models;
+package com.example.laborator9.models;
 
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.inject.Named;
 import java.util.List;
 
 @Setter

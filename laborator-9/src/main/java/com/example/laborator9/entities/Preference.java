@@ -1,5 +1,4 @@
-package io.openliberty.deepdive.rest.entities;
-
+package com.example.laborator9.entities;
 import lombok.Getter;
 import lombok.Setter;
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
@@ -14,17 +13,17 @@ import javax.persistence.*;
 @Table(name = "Preference")
 @NamedQuery(name = "Preference.findAll", query = "SELECT e FROM Preference e")
 @NamedQuery(name = "Preference.findAllByUsername",
-        query = "SELECT e FROM Preference e WHERE e.studentName =: name")
+        query = "SELECT e FROM Preference e WHERE e.username = :name")
 @NamedQuery(name = "Preference.findAllRoomsByDormitoryAndUsername",
-        query = "SELECT e FROM Preference e WHERE e.studentName =: name AND e.dormitory =: dormitory")
+        query = "SELECT e FROM Preference e WHERE e.username = :name AND e.dormitory = :dormitory")
 //@NamedQuery(name = "Student.findStudentByEmail",
 //        query = "SELECT e FROM Student e WHERE e.email = :email")
 public class Preference {
     //id, camin, camera, username_student
-    @SequenceGenerator(name = "SEQP",
+    @SequenceGenerator(name = "SEQ",
             sequenceName = "preference_id_seq",
             allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "SEQP")
+    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "SEQ")
     @Id
     @Column(name = "id")
     private int id;
@@ -38,6 +37,8 @@ public class Preference {
     private String room;
 
     @Schema(required = true)
-    @Column(name = "student_name")
-    private String studentName;
+    @Column(name = "username")
+    private String username;
+
+
 }

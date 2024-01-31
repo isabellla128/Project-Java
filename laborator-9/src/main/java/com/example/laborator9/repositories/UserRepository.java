@@ -3,8 +3,10 @@ package com.example.laborator9.repositories;
 import com.example.laborator9.entities.Group;
 import com.example.laborator9.entities.User;
 import com.example.laborator9.entities.UserGroup;
+import com.example.laborator9.models.StudentDTO;
 import com.example.laborator9.models.UserDTO;
 import com.example.laborator9.models.UserRole;
+import org.apache.commons.lang3.RandomStringUtils;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Named;
@@ -38,6 +40,27 @@ public class UserRepository implements Serializable {
         entityManager.flush();
 
         return user.getUsername();
+    }
+
+    public String addStudent(String username) {
+        Group group = entityManager.find(Group.class, UserRole.user.name().toLowerCase());
+        if (group == null) {
+            throw new IllegalArgumentException("Invalid user role");
+        }
+
+        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()-_=+[{]}\\|;:\'\",<.>/?";
+        String password = RandomStringUtils.random( 15, characters);
+        User user = new User(username, password);
+        entityManager.persist(user);
+        entityManager.flush();
+
+        UserGroup userGroup = new UserGroup();
+        userGroup.setUser(user);
+        userGroup.setGroup(group);
+        entityManager.persist(userGroup);
+        entityManager.flush();
+
+        return password;
     }
 
     public UserDTO getByUsernamePassword(UserDTO userDTO) {

@@ -16,16 +16,3 @@ CREATE SEQUENCE student_id
     START 1
     INCREMENT 1
     OWNED BY Student.id;
-
-CREATE TABLE Preference (
-    id preference_id,
-    dormitory varchar(50) not null,
-    room varchar(50) not null,
-    student_name varchar(50) not null,
-    primary key(id)
-);
-
-CREATE SEQUENCE preference_id
-    START 1
-    INCREMENT 1
-    OWNED BY Preference.id;

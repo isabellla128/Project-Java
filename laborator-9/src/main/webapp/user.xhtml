@@ -10,9 +10,9 @@
     <ui:define name="content">
         <h2>User PAGE</h2>
         <p:dataTable id="projectDataTable" lazy="true">
-            <h:outputLabel value="#{PreferenceBean.myRooms[0]}"/>
-            <h:outputLabel value="#{PreferenceBean.dormitory}"/>
-            <h:outputLabel value="#{PreferenceBean.username}"/>
+            <h:outputLabel value="#{PreferenceBean.preference.myRooms[0]}"/>
+            <h:outputLabel value="#{PreferenceBean.preference.dormitory}"/>
+            <h:outputLabel value="#{PreferenceBean.preference.username}"/>
         </p:dataTable>
         <h1><h:outputText value="Preferences" /></h1>
         <p:commandButton value="Add" type="button" icon="pi pi-plus fa" onclick="PF('addPreferenceDialog').show()" id="ui-button-add"/>
@@ -21,12 +21,12 @@
             <p:dialog header="Add Preference" widgetVar="addPreferenceDialog" minHeight="40" width="350" showEffect="fade" styleClass="ui-dialog-add-preference">
                 <h:panelGrid columns="2" id="grid" cellpadding="7">
                     <h:outputLabel for="dormitory" value="Dormitory: "/>
-                    <p:selectOneMenu id="dormitory" value="#{PreferenceBean.dormitory}" dynamic="true" required="true">
+                    <p:selectOneMenu id="dormitory" value="#{PreferenceBean.preference.dormitory}" dynamic="true" required="true">
                         <f:selectItems value="#{PreferenceBean.dormitories}"/>
                     </p:selectOneMenu>
 
                     <h:outputLabel for="rooms" value="Rooms: "/>
-                    <p:selectManyMenu id="rooms" value="#{PreferenceBean.myRooms}" dynamic="true">
+                    <p:selectManyMenu id="rooms" value="#{PreferenceBean.preference.myRooms}" dynamic="true">
                         <f:selectItems value="#{PreferenceBean.rooms}"/>
                     </p:selectManyMenu>
                 </h:panelGrid>

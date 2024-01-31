@@ -3,20 +3,21 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:p="http://primefaces.org/ui">
 <h:head>
-    <h:outputStylesheet library = "css" name = "styles.css"  />
+    <h:outputStylesheet library = "css" name = "user.css"  />
 </h:head>
 
 <ui:composition template="page.xhtml">
     <ui:define name="content">
         <h2>ADMIN PAGE</h2>
-        <div class="button-container">
-
-            <h:form enctype="multipart/form-data" >
-                <p:growl id="growl"/>
-                <h:outputLabel value="Upload JSON File:" rendered="#{FileUploadBean.number==0}"/>
-                <h:inputFile value="#{FileUploadBean.file}" class="custom-file-input upload-button" rendered="#{FileUploadBean.number==0}"/>
-                <h:commandButton value="Upload" action="#{FileUploadBean.upload}" styleClass="custom-button upload-button" rendered="#{FileUploadBean.number==0}"/>
-                <br />
+            <div class="button-container">
+                <h:form enctype="multipart/form-data">
+                    <p:growl id="growl" />
+                    <b> <h:outputLabel style="border: 1px solid #333; " value="Click here" rendered="#{FileUploadBean.number==0}" /></b>
+                    <h:outputLabel value=" to upload the JSON file for adding students" rendered="#{FileUploadBean.number==0}" />
+                    <h:inputFile value="#{FileUploadBean.file}" style="opacity: 0; z-index: 1000;position: absolute;margin-left: -388px;margin-top: 6px;" />
+                    <h:outputFormat value="#{FileUploadBean.file}"/>
+                    <h:commandButton id="ui-button-add-admin" value="Upload" action="#{FileUploadBean.upload}" styleClass="custom-button upload-button" rendered="#{FileUploadBean.number==0}" />
+                    <br />
                 <h:commandButton value="Display Message" action="#{FileUploadBean.displayMessage}" styleClass="custom-button message-button" />
             </h:form>
         </div>

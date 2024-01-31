@@ -44,8 +44,6 @@ public class FileUploadBean  {
             else {
                 FacesContext facesContext = FacesContext.getCurrentInstance();
                 facesContext.addMessage(null, new FacesMessage("Upload successfully!",file.getName() + " is uploaded."));
-                String studentsUsernames=studentsRetriever.getStudentsUsernames();
-                System.out.println(studentsUsernames);
                 studentsRetriever.postStudents(file.getInputStream());
             }
         } catch (IOException e) {
