@@ -1,5 +1,6 @@
 package io.openliberty.deepdive.rest.repository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -41,6 +42,12 @@ public class StudentRepository {
                         .setParameter("name", name)
                         .getResultList();
         return students == null || students.isEmpty() ? null : students.get(0);
+    }
+
+    public String getGradeOfAStudent(String studentUsername) {
+        return String.valueOf(em.createQuery("SELECT e.grade FROM Student e WHERE e.username = ?1")
+                .setParameter(1, studentUsername).getResultList().get(0));
+
     }
 
     public Student getStudentByUsername(String username) {

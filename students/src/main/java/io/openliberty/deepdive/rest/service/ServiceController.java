@@ -109,6 +109,27 @@ public class ServiceController {
         return studentRepository.getStudentByUsername(username);
     }
 
+    @GET
+    @Path("/username/{username}/grade")
+    @Produces({MediaType.APPLICATION_JSON})
+    @APIResponseSchema(value = String.class,
+            responseDescription = "The grade for a student with a particular username.",
+            responseCode = "200")
+    @Operation(
+            summary = "Get Grade for a given student username",
+            description = "Retrieves and returns the grade of a student with a particular username from the database ",
+            operationId = "getGradeStudent"
+    )
+    public String getGrade(
+            @Parameter(
+                    name = "username", in = ParameterIn.PATH,
+                    description = "The email used as username of the student",
+                    required = true, example = "dana.petrea@gmail.com",
+                    schema = @Schema(type = SchemaType.STRING)
+            )
+            @PathParam("username") String username) {
+        return studentRepository.getGradeOfAStudent(username);
+    }
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
