@@ -1,5 +1,6 @@
 package com.example.laborator9.beans;
 
+import com.example.laborator9.models.PreferenceDTO;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,9 +15,7 @@ import java.util.List;
 @Named("PreferenceBean")
 @RequestScoped
 public class PreferenceBean {
-    private String dormitory;
-    private List<String> myRooms;
-    private String username;
+    private PreferenceDTO preference;
 
     //IAU DIN CONTROLLER
     private List<String> dormitories = Arrays.asList("C1", "C2", "C3");

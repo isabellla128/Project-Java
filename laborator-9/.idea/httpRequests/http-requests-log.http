@@ -1,3 +1,66 @@
+GET http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/preference/pref
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-30T233026.200.json
+
+###
+
+GET http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/preference/
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-30T233023.200.txt
+
+###
+
+GET http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/preference/pref
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-30T232845.500.html
+
+###
+
+GET http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/preference/
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-30T232843.200.txt
+
+###
+
+GET http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/preference/pref
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-30T232828.500.html
+
+###
+
+GET http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/preference/
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-30T231042.200.txt
+
+###
+
+GET http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/preference
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-30T231019.404.html
+
+###
+
 POST http://localhost:8080/laborator-9-1.0-SNAPSHOT/api/lab9/students
 Content-Length: 0
 Connection: Keep-Alive

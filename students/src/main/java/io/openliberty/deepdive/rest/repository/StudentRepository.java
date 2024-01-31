@@ -22,20 +22,16 @@ public class StudentRepository {
     UserTransaction utx;
 
     public List<StudentDTO> getStudents() {
-        System.out.println(em.createNamedQuery("Student.findAll",Student.class).getResultList()
-                .stream()
-                .map(StudentDTO::new)
-                .collect(Collectors.toList()).get(0));
         return (em.createNamedQuery("Student.findAll",Student.class).getResultList())
                 .stream()
                 .map(StudentDTO::new)
                 .collect(Collectors.toList());
     }
+
     public List<String> getStudentsNames() {
         return (em.createNamedQuery("Student.findAll",Student.class).getResultList())
                 .stream()
-                .map(StudentDTO::new)
-                .map(StudentDTO::getUsername)
+                .map(Student::getUsername)
                 .collect(Collectors.toList());
     }
 
