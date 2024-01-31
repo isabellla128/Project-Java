@@ -22,16 +22,13 @@
                 <h:panelGrid columns="2" id="grid" cellpadding="7">
                     <h:outputLabel for="dormitory" value="Dormitory: "/>
                     <p:selectOneMenu id="dormitory" value="#{PreferenceBean.dormitory}" dynamic="true" required="true">
-                        <!--@elvariable id="DormitoryView" type="com.example.laborator9.views.DormitoryView"-->
-<!--                        <f:selectItems value="#{DormitoryView.dormitories}"/>-->
-                        <f:selectItems value="#{['4', '5']}"/>
+                        <f:selectItems value="#{DormitoryView.dormitories}"/>
+                        <p:ajax listener="#{DormitoryView.onDormitoryChange(PreferenceBean.dormitory)}" update="rooms"/>
                     </p:selectOneMenu>
 
                     <h:outputLabel for="rooms" value="Rooms: "/>
                     <p:selectManyMenu id="rooms" value="#{PreferenceBean.myRooms}" dynamic="true">
-                        <!--@elvariable id="DormitoryView" type="com.example.laborator9.views.DormitoryView"-->
-<!--                        <f:selectItems value="#{DormitoryView.rooms}"/>-->
-                        <f:selectItems value="#{['1', '4', '5']}"/>
+                        <f:selectItems value="#{DormitoryView.rooms}"/>
                     </p:selectManyMenu>
                 </h:panelGrid>
                 <f:facet name="footer">
