@@ -9,6 +9,8 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.util.List;
+import java.util.Map;
 
 @Named("PreferenceService")
 @ApplicationScoped
@@ -18,13 +20,14 @@ public class PreferenceService {
     @Inject
     PreferenceRepository preferenceRepository;
 
-    public void addPreference(PreferenceDTO preference)
-    {
+    public void addPreference(PreferenceDTO preference) throws Exception {
         UserDTO loggedInUser = (UserDTO) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("loggedInUser");
         preference.setUsername(loggedInUser.getUsername());
-        System.out.println(preference.getDormitory() + " " + preference.getMyRooms() + " " + preference.getUsername());
-        //preferenceRepository.addPreference(preference);
+        preferenceRepository.addPreference(preference);
     }
 
-
+    public List<PreferenceDTO> getDormitoryRooms() {
+        UserDTO loggedInUser = (UserDTO) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("loggedInUser");
+        return preferenceRepository.getPreferencesByUsername(loggedInUser.getUsername());
+    }
 }

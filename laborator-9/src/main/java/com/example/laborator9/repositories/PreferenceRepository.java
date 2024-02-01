@@ -20,38 +20,18 @@ public class PreferenceRepository {
     @Resource
     UserTransaction utx;
 
-    public List<PreferenceDTO> getPreferences() {
-        List<PreferenceDTO> preferencesDTO = new ArrayList<>();
-        List<Preference> preferences =  em.createNamedQuery("Preference.findAll", Preference.class).getResultList();
-        for(Preference userPreference : preferences) {
-            String username = userPreference.getUsername();
-            createPreferenceDTO(preferencesDTO, preferences, username);
-        }
-        return preferencesDTO;
-    }
-
-    private void createPreferenceDTO(List<PreferenceDTO> preferencesDTO, List<Preference> preferences, String username) {
-        List<String> myRooms;
-        for (Preference preference : preferences) {
-            String dormitory = preference.getDormitory();
-            List<Preference> myPreferences = em.createNamedQuery("Preference.findAllRoomsByDormitoryAndUsername", Preference.class)
-                    .setParameter("name", username)
-                    .setParameter("dormitory", dormitory)
-                    .getResultList();
-            myRooms = new ArrayList<>();
-            for (Preference newPreference : myPreferences) {
-                myRooms.add(newPreference.getRoom());
-            }
-            preferencesDTO.add(new PreferenceDTO(dormitory, username, myRooms));
-        }
-    }
-
     public List<PreferenceDTO> getPreferencesByUsername(String username) {
         List<PreferenceDTO> preferencesDTO = new ArrayList<>();
-        List<Preference> preferences =  em.createNamedQuery("Preference.findAllByUsername", Preference.class)
-                .setParameter("name", username)
+        List<String> dormitories =  em.createQuery("SELECT DISTINCT e.dormitory FROM Preference e WHERE e.username=?1", String.class)
+                .setParameter(1, username)
                 .getResultList();
-        createPreferenceDTO(preferencesDTO, preferences, username);
+        for (String dormitory : dormitories) {
+            List<String> myRooms =  em.createQuery("SELECT DISTINCT e.room FROM Preference e WHERE e.username=?1 and e.dormitory = ?2", String.class)
+                    .setParameter(1, username)
+                    .setParameter(2, dormitory)
+                    .getResultList();
+            preferencesDTO.add(new PreferenceDTO(dormitory, username, myRooms));
+        }
         return preferencesDTO;
     }
 
@@ -61,11 +41,13 @@ public class PreferenceRepository {
             newPreference.setDormitory(preferenceDTO.getDormitory());
             newPreference.setUsername(preferenceDTO.getUsername());
             if(!preferenceDTO.getMyRooms().isEmpty()) {
-                utx.begin();
+//                utx.begin();
                 for (int i = 0; i < preferenceDTO.getMyRooms().size(); i++) {
+                    newPreference.setRoom(preferenceDTO.getMyRooms().get(i));
+                    utx.begin();
                     em.persist(newPreference);
+                    utx.commit();
                 }
-                utx.commit();
             }
         }
     }

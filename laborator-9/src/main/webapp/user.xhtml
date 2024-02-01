@@ -9,10 +9,16 @@
 <ui:composition template="page.xhtml">
     <ui:define name="content">
         <h2>User PAGE</h2>
-        <p:dataTable id="projectDataTable" lazy="true">
-            <h:outputLabel value="#{PreferenceBean.myRooms[0]}"/>
-            <h:outputLabel value="#{PreferenceBean.dormitory}"/>
-            <h:outputLabel value="#{PreferenceBean.username}"/>
+        <p:dataTable id="projectDataTable" value="#{DormitoryView.myPreferences}" var="myPreference" lazy="true">
+            <p:column headerText="Dormitory">
+                <h:outputText value="#{myPreference.dormitory}" />
+            </p:column>
+
+            <p:column headerText="Rooms">
+                <h:outputText value="#{myPreference.myRooms}" var="myRoom" />
+                <h:outputText value="#{myRoom}"/>
+            </p:column>
+
         </p:dataTable>
         <h1><h:outputText value="Preferences" /></h1>
         <p:commandButton value="Add" type="button" icon="pi pi-plus fa" onclick="PF('addPreferenceDialog').show()" id="ui-button-add"/>

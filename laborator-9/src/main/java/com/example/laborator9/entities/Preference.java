@@ -39,6 +39,4 @@ public class Preference {
     @Schema(required = true)
     @Column(name = "username")
     private String username;
-
-
 }
